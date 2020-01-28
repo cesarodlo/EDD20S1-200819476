@@ -18,10 +18,10 @@ class Tarea1{
                 matriz[k][t-1]=1;
             }
         }
+        //imprimiendo la matriz
         for(int i=0;i<t;i++){
             for(int j=0;j<t;j++){
                 System.out.print(matriz[i][j]);
-                
             }
             System.out.println(" ");
         }
