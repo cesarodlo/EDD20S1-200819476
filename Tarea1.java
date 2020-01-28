@@ -1,3 +1,5 @@
+//Cesar RodLo
+//EDD INGENIERIA USAC
 import java.util.*;
 class Tarea1{
     public static void main (String[]args){
