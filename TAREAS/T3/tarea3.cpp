@@ -56,8 +56,6 @@ lista::~lista()
 void lista::Insertar(int num, string nom)
 {
    pnodo anterior;
- 
-   // Si la lista está vacía
    if(ListaVacia() || primero->carne > num) {
       // Asignamos a lista un nievo nodo  con el numero de carne y su siguiente elemento es la lista actual                    
       primero = new nodo(num,nom, primero);
@@ -69,8 +67,7 @@ void lista::Insertar(int num, string nom)
       // un valor mayor que carne
       while(anterior->siguiente && anterior->siguiente->carne <= num) 
          anterior = anterior->siguiente;
-      // Creamos un nuevo nodo después del nodo anterior, y cuyo siguiente
-      // es el siguiente del anterior
+      // Crear un nuevo nodo después del nodo anterior, y cuyo siguiente es el siguiente del anterior
       anterior->siguiente = new nodo(num, nom, anterior->siguiente);
    }
 }
@@ -89,7 +86,7 @@ void lista::Borrar(int num)
    else { // Borrar el nodo 
       if(!anterior) // Primer elemento 
          primero = nodo->siguiente;
-      else  // un elemento cualquiera
+      else  // un elemento que no es el buscado
          anterior->siguiente = nodo->siguiente;
       delete nodo;
    }   
