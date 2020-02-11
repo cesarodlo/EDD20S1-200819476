@@ -34,7 +34,7 @@ class lista {
     void Primero();
     void Ultimo();
     bool Actual() { return actual != NULL; }
-    int ValorActual() { return actual->valor; }
+    int ValorActual() { return actual->carne }
     
    private:
     pnodo primero;
